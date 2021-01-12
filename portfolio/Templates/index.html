@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+.myimg{
+  width:400px;
+  height:400px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm">
+            <img src="https://scontent.fbkk22-2.fna.fbcdn.net/v/t1.0-9/117109227_2580793685517945_4563987036835656682_n.jpg?_nc_cat=105&amp;ccb=2&amp;_nc_sid=09cbfe&amp;_nc_eui2=AeFRuvPLnf6bpGNym5I-qmcMh3I2bAbna7iHcjZsBudruEPLbOnPpyr-uUemBK4iNs_3HgZqF4X-Da4ecV2a6sc4&amp;_nc_ohc=9Gf6_h4ZwNYAX-BiwFR&amp;_nc_oc=AQmovpGSQPHV3GffRxwPMGY5n9dOaS-y4OhiStJB85lOLwfYZf9Cjp8B3v03sS54C3c&amp;_nc_ht=scontent.fbkk22-2.fna&amp;oh=9b87b1e6536776b30e725180b2efc8af&amp;oe=602138EA" class="myimg">
+            <h4>PERSONAL DETAILS</h4>
+            <h5>Birth date</h5>
+            2/10/1999
+            <h5>Nationality</h5>
+            Thai
+            <h5>Address</h5>
+            5/1 Viphavadee-rangsit25 Road,
+            <h5></h5>
+            Thungsonghong Sub-area,
+            <h5></h5>
+            Bangkok 10210
+            <h5></h5>
+            <h5>Contact via Email</h5>
+            sujinunt.p@ku.th
+            <h1></h1>
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Contact
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    {% load widget_tweaks %}
+            <form method="post" novalidate>
+              {% csrf_token %}
+              {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+              {% endfor %}
+              {% for field in form.visible_fields %}
+                <div class="form-group">
+                  {{ field.label_tag }}
+                  {% render_field field class="form-control" %}
+                  {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                  {% endif %}
+                </div>
+              {% endfor %}
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+                </div>
+              </div>
+        </div>
+        <div class="col-8">
+            <br></br>
+           <h1>Sujinunt Puangmalai Portfolio</h1>
+           <br></br>
+           <h4>EXPERIENCE</h4>
+           <br></br>
+           <h5>The Last Warlock Project</h5>
+           <h6>GAME DEVELOPER</h6>
+           <p>2D RPG Game based on java.</p>
+
+           <h5>Survival now Project</h5>
+           <h6>GAME DEVELOPER</h6>
+           <p>2D Arcade shooting game based on python.</p>
+
+           <h5>Easy Hotel Booking Web Beta</h5>
+           <h6>PROGRAMMER</h6>
+           <p>Project from Database class.
+           Hotel booking web that create from html and javascript.
+           Use Google Firebase to be a database.</p>
+
+           <h5>Proto Photo Edit</h5>
+           <h6>PROGRAMMER</h6>
+           <p>Photo editor based on python.
+           Use Azure Board to plan with Scrum method.</p>
+           
+           <h5>The Ghost in Town</h5>
+           <h6>GAME DEVELOPER</h6>
+           <P>3D Survival Horror game based on Unity engine and C#.</P>
+           
+           <h5>User Management System</h5>
+           <h6>BACK-END DEVELOPER</h6>
+           <p>The User Management that can be login, logout, register, reset password and sending Email.</p>
+           
+           <h5>Microsoft Team Chatbot</h5>
+           <h6>BACK-END DEVELOPER</h6>
+           <p>Chatbot that can reply message and get Microsoft Graph API.</p>
+           <br></br>
+           <h4>EDUCATION</h4>
+           <br></br>
+            <h5>Software and Knowledge Engineering</h5>
+            <h6>KASETSART UNIVERSITY</h6>
+            <br></br>
+           <h4>SKILLS</h4>
+           <h6></h6>
+           <li>Python</li>
+           <h6></h6>
+           <li>Jupyter Notebook</li>
+           <h6></h6>
+           <li>MySQL</li>
+           <h6></h6>
+           <li>Node-RED</li>
+           <h6></h6>
+           <li>RapidMiner Studio</li>
+           <h6></h6>
+           <li>Unity</li>
+           <h6></h6>
+           <li>C#</li>
+           <h6></h6>
+           <li>Firebase</li>
+           <h6></h6>
+           <li>JavaScript</li>
+           <h6></h6>
+           <li>TypeScript</li>
+           <br></br>
+           <h4>HOBBY</h4>
+           <li>Playing Game</li>
+           <h6></h6>
+           <li>Watch Movie</li>
+           <h6></h6>
+           <li>Read Manga</li>
+
+        </div>
+    </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
